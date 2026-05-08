@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Salud</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .formulario{
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h2{
+            text-align: center;
+            color: #333;
+        }
+
+        label{
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="range"]{
+            padding: 0;
+        }
+
+        .btn{
+            width: 100%;
+            margin-top: 20px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            background: #008cdd;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="formulario">
+        <h2>Encuesta de Salud</h2>
+
+        <label>Nombre Completo:</label>
+        <input type="text" placeholder="Ingresa tu nombre" required>
+
+        <label>Edad:</label>
+        <input type="number" min="1" max="120" placeholder="Edad" required>
+
+        <label>Peso (kg):</label>
+        <input type="number" min="20" max="300" placeholder="Peso" required>
+
+        <label>Estatura (cm):</label>
+        <input type="number" min="50" max="250" placeholder="Estatura" required>
+
+        <label>Nivel de dolor:</label>
+        <input type="range" min="0" max="10">
+
+        <label>Tipo de sangre:</label>
+        <select required>
+            <option value="">Selecciona tu tipo</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+        </select>
+
+        <button type="submit" class="btn">Enviar Encuesta</button>
+    </form>
+
+</body>
+</html>
